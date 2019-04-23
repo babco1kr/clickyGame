@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ImageCard from "./components/imageCards";
+import photos from "./photos.json";
+
+const styles = {
+  flex: {
+    display: "flex",
+    flexWrap: "wrap"
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <div style={styles.flex} className = "container">
+    <ImageCard photos = {photos} />
+  </div>
+  )
 }
 
 export default App;

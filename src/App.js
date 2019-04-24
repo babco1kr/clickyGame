@@ -39,14 +39,24 @@ class App extends Component {
 
 clickPhoto = id => {
   let clicked = this.state.clicked;
+  let clickCount = this.state.clickCount;
+  let highScore = this.state.highScore;
   // console.log(clicked);
   // console.log(clicked.includes(id));
   if (clicked.includes(id) === false) {
     clicked.push(id);
+    clickCount++;
+    if (clickCount > highScore) {
+      highScore = clickCount;
+      this.setState({highScore});
+    }
     console.log(clicked);
+    this.setState({clickCount});
     this.setState({clicked});
     this.shuffle(this.state.photos);
   } else {
+    clickCount = 0;
+    this.setState({clickCount});
     console.log("game over");
     this.shuffle(this.state.photos);
     clicked = [];
@@ -59,7 +69,10 @@ clickPhoto = id => {
   render() {
   return (
     <div>
-    <NavBar />
+    <NavBar 
+    highScore = {this.state.highScore}
+    clickCount = {this.state.clickCount}
+    />
     <div style={styles.flex} className = "container">
     <div style = {styles.imageContainer}>
     {this.state.photos.map(photo => (

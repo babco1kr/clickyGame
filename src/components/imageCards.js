@@ -8,23 +8,16 @@ const styles = {
     imageHolder: {
         width: "200px",
         margin: "10px 25px"
-    },
-    imageContainer: {
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center"
     }
 };
 
 function ImageCard(props) {
     return (
-        <div style= {styles.imageContainer}>
-        {props.photos.map(photo =>
         <div style={styles.imageHolder}>
-        <img id = {photo.id} style = {styles.images} className = "thumbnail" src = {photo.image} alt = ""></img>
+        <img style = {styles.images} className = "thumbnail" src = {props.image} alt = ""
+        onClick={() => props.clickPhoto(props.id)}></img>
         </div>   
-            )}
-        </div>
+            
     )
 }
 

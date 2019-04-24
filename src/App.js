@@ -38,15 +38,20 @@ class App extends Component {
 }
 
 clickPhoto = id => {
-  const clicked = this.state.clicked;
-  console.log(clicked[id]);
-  if (clicked[id] === -1) {
+  let clicked = this.state.clicked;
+  // console.log(clicked);
+  // console.log(clicked.includes(id));
+  if (clicked.includes(id) === false) {
     clicked.push(id);
+    console.log(clicked);
     this.setState({clicked});
     this.shuffle(this.state.photos);
   } else {
     console.log("game over");
     this.shuffle(this.state.photos);
+    clicked = [];
+    this.setState({clicked});
+    console.log(clicked);
   }
 }
 

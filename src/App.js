@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import NavBar from "./components/navbar";
-import ImageCard from "./components/imageCards";
+import ImageCard from "./components/imageCard/imageCards";
 import photos from "./photos.json";
 
 
@@ -26,6 +26,7 @@ class App extends Component {
     clicked: []
   }
 
+  // Function to shuffle all photos in the array
   shuffle = (photos) => {
     let i = photos.length - 1;
     for (; i > 0; i--) {
@@ -41,20 +42,20 @@ clickPhoto = id => {
   let clicked = this.state.clicked;
   let clickCount = this.state.clickCount;
   let highScore = this.state.highScore;
-  // console.log(clicked);
-  // console.log(clicked.includes(id));
+  // Checks to see if item has been clicked before
   if (clicked.includes(id) === false) {
     clicked.push(id);
     clickCount++;
+    // Updates current score and checks to see if its the new High Score
     if (clickCount > highScore) {
       highScore = clickCount;
       this.setState({highScore});
     }
-    console.log(clicked);
     this.setState({clickCount});
     this.setState({clicked});
     this.shuffle(this.state.photos);
   } else {
+    // Restars the game, reseting all values
     clickCount = 0;
     this.setState({clickCount});
     console.log("game over");

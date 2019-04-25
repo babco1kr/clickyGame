@@ -42,8 +42,10 @@ clickPhoto = id => {
   let clicked = this.state.clicked;
   let clickCount = this.state.clickCount;
   let highScore = this.state.highScore;
+  const element = document.getElementById("imageArea");
   // Checks to see if item has been clicked before
   if (clicked.includes(id) === false) {
+    element.classList.remove("shake");
     clicked.push(id);
     clickCount++;
     // Updates current score and checks to see if its the new High Score
@@ -56,6 +58,7 @@ clickPhoto = id => {
     this.shuffle(this.state.photos);
   } else {
     // Restars the game, reseting all values
+    element.classList.add("shake");
     clickCount = 0;
     this.setState({clickCount});
     console.log("game over");
@@ -75,7 +78,7 @@ clickPhoto = id => {
     clickCount = {this.state.clickCount}
     />
     <div style={styles.flex} className = "container">
-    <div style = {styles.imageContainer}>
+    <div id = "imageArea" style = {styles.imageContainer}>
     {this.state.photos.map(photo => (
     <ImageCard 
     key = {photo.id}

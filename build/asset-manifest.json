@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/babco1kr/clickyGame/build/index.html/static/css/main.152d6e6e.chunk.css",
-    "main.js": "/babco1kr/clickyGame/build/index.html/static/js/main.4d36a3f5.chunk.js",
-    "main.js.map": "/babco1kr/clickyGame/build/index.html/static/js/main.4d36a3f5.chunk.js.map",
-    "runtime~main.js": "/babco1kr/clickyGame/build/index.html/static/js/runtime~main.7b71cf10.js",
-    "runtime~main.js.map": "/babco1kr/clickyGame/build/index.html/static/js/runtime~main.7b71cf10.js.map",
-    "static/js/2.6efc73d3.chunk.js": "/babco1kr/clickyGame/build/index.html/static/js/2.6efc73d3.chunk.js",
-    "static/js/2.6efc73d3.chunk.js.map": "/babco1kr/clickyGame/build/index.html/static/js/2.6efc73d3.chunk.js.map",
-    "index.html": "/babco1kr/clickyGame/build/index.html/index.html",
-    "precache-manifest.06b227fd94b3557b881ea5c3d40e9b0a.js": "/babco1kr/clickyGame/build/index.html/precache-manifest.06b227fd94b3557b881ea5c3d40e9b0a.js",
-    "service-worker.js": "/babco1kr/clickyGame/build/index.html/service-worker.js",
-    "static/css/main.152d6e6e.chunk.css.map": "/babco1kr/clickyGame/build/index.html/static/css/main.152d6e6e.chunk.css.map"
+    "main.css": "/clickyGame/build/index.html/static/css/main.152d6e6e.chunk.css",
+    "main.js": "/clickyGame/build/index.html/static/js/main.0fb27462.chunk.js",
+    "main.js.map": "/clickyGame/build/index.html/static/js/main.0fb27462.chunk.js.map",
+    "runtime~main.js": "/clickyGame/build/index.html/static/js/runtime~main.652e221e.js",
+    "runtime~main.js.map": "/clickyGame/build/index.html/static/js/runtime~main.652e221e.js.map",
+    "static/js/2.6efc73d3.chunk.js": "/clickyGame/build/index.html/static/js/2.6efc73d3.chunk.js",
+    "static/js/2.6efc73d3.chunk.js.map": "/clickyGame/build/index.html/static/js/2.6efc73d3.chunk.js.map",
+    "index.html": "/clickyGame/build/index.html/index.html",
+    "precache-manifest.cc64a5437eab77b4a1ee6bdcf6058cf4.js": "/clickyGame/build/index.html/precache-manifest.cc64a5437eab77b4a1ee6bdcf6058cf4.js",
+    "service-worker.js": "/clickyGame/build/index.html/service-worker.js",
+    "static/css/main.152d6e6e.chunk.css.map": "/clickyGame/build/index.html/static/css/main.152d6e6e.chunk.css.map"
   }
 }

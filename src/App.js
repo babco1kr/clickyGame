@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from "./components/navbar/navbar";
 import Header from "./components/header/header";
 import ImageCard from "./components/imageCard/imageCards";
+import Footer from "./components/footer/footer";
 import photos from "./photos.json";
 
 
@@ -14,8 +15,12 @@ const styles = {
   imageContainer: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center"
-}
+    justifyContent: "center",
+    marginTop: "15px"
+  },
+  pageContainer: {
+    display: "relative"
+  }
 }
 
 class App extends Component {
@@ -96,6 +101,7 @@ clickPhoto = id => {
     ))}
     </div>
     </div>
+    <Footer />
     </div>
   )
 }

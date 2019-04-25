@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import NavBar from "./components/navbar";
+import NavBar from "./components/navbar/navbar";
+import Header from "./components/header/header";
 import ImageCard from "./components/imageCard/imageCards";
 import photos from "./photos.json";
 
@@ -23,7 +24,8 @@ class App extends Component {
     photos,
     clickCount: 0,
     highScore: 0,
-    clicked: []
+    clicked: [],
+    gameStatus: "Click an image to begin!"
   }
 
   // Function to shuffle all photos in the array
@@ -42,9 +44,12 @@ clickPhoto = id => {
   let clicked = this.state.clicked;
   let clickCount = this.state.clickCount;
   let highScore = this.state.highScore;
+  let gameStatus;
   const element = document.getElementById("imageArea");
   // Checks to see if item has been clicked before
   if (clicked.includes(id) === false) {
+    gameStatus = "You guessed correctly!";
+    this.setState({gameStatus});
     element.classList.remove("shake");
     clicked.push(id);
     clickCount++;
@@ -58,14 +63,14 @@ clickPhoto = id => {
     this.shuffle(this.state.photos);
   } else {
     // Restars the game, reseting all values
+    gameStatus = "You guessed incorrectly!";
+    this.setState({gameStatus});
     element.classList.add("shake");
     clickCount = 0;
     this.setState({clickCount});
-    console.log("game over");
     this.shuffle(this.state.photos);
     clicked = [];
     this.setState({clicked});
-    console.log(clicked);
   }
 }
 
@@ -76,7 +81,9 @@ clickPhoto = id => {
     <NavBar 
     highScore = {this.state.highScore}
     clickCount = {this.state.clickCount}
+    gameStatus = {this.state.gameStatus}
     />
+    <Header />
     <div style={styles.flex} className = "container">
     <div id = "imageArea" style = {styles.imageContainer}>
     {this.state.photos.map(photo => (
